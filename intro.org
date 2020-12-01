@@ -1,0 +1,305 @@
+The Art of Metaprogramming in Scheme
+
+* Introduction
+
+** The contemporary landscape of computation
+
+The field of programming is certainly dominated 
+by 'pragmatism'. Those who pay the money for the code
+usually aren't concerned with its aesthetics, as
+their major concern is whether it works as they want
+it to.
+
+Those who learn to become professional programmers
+are focused on measurable issues, such as performance,
+responsiveness, or time/space complexity. The question
+of style does not share similar esteem.
+
+The industry has chosen its favorite programming languages,
+and it sticks to them, despite their apparent flaws.
+We are settled firmly on the tradition of UNIX
+and its idea of computing. The search for alternatives,
+underpinning audacious enterprises such as Symbolics' LISP
+machines or the grand vision developed at Xerox PARC,
+today can only be considered romantic. We are living
+in the computing reality that's already been established.
+
+Yet, some things are changing, and among them, there are
+things that are changing for the better. The practice
+of writing automated tests is not only widely discussed
+among professional developers, but it is also applied
+in many real life projects, and supported by default
+in many software ecosystems. The sheer number of books
+and conferences devoted to functional programming has 
+exploded in the past decade. The computing devices
+and their processing power are now abundant.
+
+** The immense value of examples
+
+The fatal flaw of the language is that it hides
+the meaning behind a name. Names may sound
+intriguing, seductive, professional, puzzling
+or interesting, but comprehending them always
+requires elaborate attempts. The names used in the
+previous paragraph, like 'automated tests' or
+'functional programming' can be (and historically
+have been) understood differently by different people.
+
+Automated testing tends to use software packages
+known as 'unit-test frameworks'. Those frameworks do
+a lot of things, but their sole existence needlessly
+obscures the very simple idea of automated tests, which is:
+
+"write a program which runs a piece of another program 
+and checks whether it did what it was supposed to do"
+
+Likewise, many people who advocate 'functional programming'
+focus on 'side effects' and the question of 'enforcing
+the order of evaluation with pure functions', proposing
+obscure solutions such as 'free monads', or even claiming
+that they are 'the essence of functional programming'.
+
+We believe, that the highly idiosyncratic terminology
+used in programming needlessly increases the friction
+that the people who are unfamiliar with the jargon
+need to overcome.
+
+Although in principle we have nothing against
+jargon, we believe that using straightforward,
+common, familiar terms -- to the extent they apply
+-- is a win to both beginners and experts, because
+it increases the range of topics that can be covered
+in a conversation with both parties.
+
+This is why, for example, we prefer to say 'an example'
+instead of 'a unit test'.
+
+We believe that it is evident, that most of our understanding
+has its roots in concrete, specific examples. Exemplifying
+this simple truth is the main point of this book.
+
+** Why Scheme
+
+Some people may find it hard to understand why we decided
+to use a Lisp dialect from 1970s to write programs for
+a book in 2020s. Why not something more modern? Why not
+Clojure? Why not Ruby? Why not Haskell? Why not some
+language that people actually use, like Java or JavaScript?
+
+Having experience with many languages, we have found that
+Lisp is a language which imposes very little constraints
+on a programmer, while still being principled.
+
+Or, to put it slightly differently, Lisp programmers have
+the freedom of making their programs look exactly the way
+they want them to.
+
+Some unfavorable people expand LISP as an acronym for
+"Lots of Irritating Superfluous Parentheses", and others
+compare the looks of Lisp programs to an oat meal with
+finger nail clippings mixed in.
+
+The truth is, that if a Lisp programmer wanted their
+program to look differently, they could easily add in
+whatever syntax they'd wish.
+
+The other truth is that this added syntax would not only
+be some unnecessary effort to produce and maintain: that
+it would also be an effort for the reader of the code
+to understand it.
+
+Sometime people claim that the common 'PEMDAS' precedence
+rules of arithmetic expressions are easier to read and use
+than the fully parenthesized prefix syntax of Lisp. That's
+probably because they forget the effort that they had to
+put into internalizing this set of rules.
+
+It's not that those rules are bad. Actually, they seem
+optimal for the purpose they were invented for, namely,
+manipulating formulas using pen and paper (or a piece
+of chalk and a blackboard). In the same context, it is
+also more convenient to use short symbols for referring
+to objects or variables -- particularly the ones that
+can be drawn with one or two strokes.
+
+But neither is the basic algebra used often in
+programming, nor is programming a context which would
+require to keep identifiers short. Conversely, using good
+descriptive names is a programming practice that is
+helpful and valuable.
+
+The syntactic simplicity of Lisp creates opportunities
+that are harder to see in other languages. One obvious
+example are macros. But there's also a simpler example,
+namely -- the comment syntax.
+
+Many programming languages provide two styles of comments:
+line comments, which span from some comment marker to the
+end of line (like src_C++{//} in C++ or src_python{#} in Python
+or src_scheme{;} in many Lisp dialects), and delimited comments,
+which span between a matching pair of delimiters (like 
+src_C{/*} and src_C{*/} in C-like languages or src_scheme{#|}
+and src_scheme{|#} in Scheme).
+
+In addition to these comment styles, Scheme offers another
+one, namely -- single expression comments. Any expression
+(i.e. either a lexical atom, like a number, symbol or
+string, or a compound expressions, that is, a sequence
+of expressions enclosed in a matching pair of parentheses) 
+that follows a sequence src_scheme{#;} will be ignored
+by the parser.
+
+It is hard to show the entire usefulness of this feature
+in a book -- it takes a lot of hands-on experience to
+appreciate it. But there is one aspect which, we believe,
+could be appreciated by our prominent readers immediately.
+
+Consider the following signature of a graph search function:
+
+#+BEGIN_SRC scheme
+(define (optimial-path weighted-graph
+                       initial-state 
+		       success?
+		       remaining-cost-estimate)
+  ...)
+#+END_SRC
+
+You can see, that the function depends on four arguments.
+The names of the arguments provide some hints regarding
+their roles. But if we go from a function definition to
+its usage, the code might look somewhat like this:
+
+#+BEGIN_SRC scheme
+... 
+(optimial-path g g0 c f)
+...
+#+END_SRC
+
+Now, it is much less obvious what the roles of the subsequent
+arguments to the function are.
+
+However, if we add a "preposition comment" before each
+argument:
+
+#+BEGIN_SRC scheme
+(define (optimial-path #;on weighted-graph
+                       #;from initial-state 
+		       #;until success?
+		       #;guided-by remaining-cost-estimate)
+  ...)
+#+END_SRC
+
+and keep using the same preposition comments whenever
+the function is used:
+
+#+BEGIN_SRC scheme
+... 
+(optimial-path #;on g #;from g0 #;until c #;guided-by f)
+...
+#+END_SRC
+
+then, we dare to claim, the code is much easier to read
+(especially to read out loud), and -- once you pronounce
+the sentence "optimal path on a weighted graph from some
+initial state until some success condition is reached,
+guided by a remaining cost estimate" in your head 
+-- it is much harder to put arguments in an incorrect
+order.
+
+** Why this book
+
+Scheme is a very simple and very elastic programming
+language, and it gives a lot of freedom to programmers.
+
+It is up to programmers to make a good use of the freedom
+they receive from the language, and no language can guarantee
+that the uttetances made in that language are going to be
+wise, or elegant, or meaningful.
+
+Over the years, we have developed a particular style of
+programming, and we feel that now is the time to share it
+with the world.
+
+One particular component of that style is a set of macros
+and functions on top of Scheme, which form a language
+that we have called "Grand Scheme".
+
+We imagine this book to be a collection of "programming
+stories" -- a set of programs that can be read and
+contemplated for pleasure. The goal of our lecture is
+twofold: first, we think that the topics presented in
+this book are interesting on their own, and knowing them
+can turn out to be useful for the career of a professional
+programmer. Second, we believe that reading well written
+programs is a vital part of becoming a good programmer.
+
+Both authors of this book have learned a lot by studying
+important programming books such as Peter Norvig's
+"Paradigms of Artificial Intelligence Programming" or
+"Structure and Interpretation of Computer Programs"
+by Abelson and Sussman, among others.
+
+** Who is this book for?
+
+Our dirty little sectet is that we've been writing this
+book mainly for ourselves -- to systematize some of the
+knowledge that we gained when we were tinkering with
+metaprogramming.
+
+On the other hand, neither of us was the 'persona'
+that we had in mind when we were writing these words.
+
+We believe that everybody could benefit from reading
+this work. We do not limit our intended audience to
+professional programmers: we think that programming
+is a great tool for learning and understanding the
+world around us.
+
+We have put a lot of effort in making the programs written
+in this book easy to read. Not to 'professional programmers',
+not to 'Scheme programmers', but to 'everybody'.
+
+However, we do realize that we cannot hope for 'everybody'
+to read our 'opus'. In particular, we don't expect many 
+'professional software developers' to be foumd among
+out readers, and that's because most of them barely ever
+read any books. Nevertheless, if you happen to be
+a professional software developer, be informed that
+we really appreciate your presence here.
+
+To the rest of you: we realize that probably no one
+learns programming in order to read code. We learn it
+because we want to make cool stuff. Trying things out
+and failing is an important part of the process.
+
+But, the importance of being exposed to concepts should
+not be underestimated. 
+
+For many years, we've been living and breathing with the idea
+that 'to understand something' means 'to be able to express
+it in a programming language'. It is a very radical standpoint,
+but in our experience, it has been rather fruitful.
+
+This book is not a slow-paced introductory book. It throws
+you to water right away, and expects that you know how to swim.
+
+It explains every new concept that it introduces, and as such
+it is meant to be self-contained. We believe that if a computer
+can 'understand' our definitions, so can you.
+
+But there is a huge leap between 'having something explained'
+and 'knowing it by heart'. No one learns to drive solely by
+reading books.
+
+If you find the material in this book hard to follow, there's
+plenty of excellent introductory Scheme and Lisp texts
+available, including 'Scheme and The Art of Programming' by
+Springer and Friedman, 'Teach Yourself Scheme in Fixnum Days'
+by Dorai Sitaram, or 'How to Design Programs' by Felleisen,
+Findler, Flatt and Krishnamurthi. There's also a fun book
+called 'Land of Lisp' by Conrad Barski, which introduces
+readers to Common Lisp by developing games.
+
+Lisp and Scheme may not be the most popular languages
+in the computing industry, but both the amount and the
+quality of writings devoted to them is exceptional.
