@@ -1,8 +1,4 @@
-The Art of Metaprogramming in Scheme
-
-* Introduction
-
-** The contemporary landscape of computation
+* The contemporary landscape of computation
 
 The field of programming is certainly dominated 
 by 'pragmatism'. Those who pay the money for the code
@@ -34,7 +30,7 @@ and conferences devoted to functional programming has
 exploded in the past decade. The computing devices
 and their processing power are now abundant.
 
-** The immense value of examples
+* The immense value of examples
 
 The fatal flaw of the language is that it hides
 the meaning behind a name. Names may sound
@@ -78,7 +74,7 @@ We believe that it is evident, that most of our understanding
 has its roots in concrete, specific examples. Exemplifying
 this simple truth is the main point of this book.
 
-** Why Scheme
+* Why Scheme
 
 Some people may find it hard to understand why we decided
 to use a Lisp dialect from 1970s to write programs for
@@ -206,7 +202,7 @@ guided by a remaining cost estimate" in your head
 -- it is much harder to put arguments in an incorrect
 order.
 
-** Why this book
+* Why this book
 
 Scheme is a very simple and very elastic programming
 language, and it gives a lot of freedom to programmers.
@@ -239,7 +235,7 @@ important programming books such as Peter Norvig's
 "Structure and Interpretation of Computer Programs"
 by Abelson and Sussman, among others.
 
-** Who is this book for?
+* Who is this book for?
 
 Our dirty little sectet is that we've been writing this
 book mainly for ourselves -- to systematize some of the

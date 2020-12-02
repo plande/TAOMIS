@@ -1,0 +1,16 @@
+The Art of Metaprogramming in Scheme
+
+* Introduction
+#+INCLUDE "intro.org" :minlevel 2
+* The fundaments of our cognition
+abstraction, naming, meaning and compositionality, associations, 
+identity and difference, one and many; shifting perspectives
+- direct and reported speech
+* Growing a language
+syntactic abstractions - syntax-rules macros
+examples: the e.g. form
+overcoming the limitations of a language - infix notation,
+new ways of seeing things - pattern matching
+overcoming the limitations of a language - overiding the core forms
+* Metaprogramming basics
+lambda-calculus, a macro expander
