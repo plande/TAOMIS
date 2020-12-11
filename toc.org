@@ -1,11 +1,9 @@
-The Art of Metaprogramming in Scheme
+#+TITLE The Art of Metaprogramming in Scheme
 
 * Introduction
 #+INCLUDE "intro.org" :minlevel 2
 * The fundaments of our cognition
-abstraction, naming, meaning and compositionality, associations, 
-identity and difference, one and many; shifting perspectives
-- direct and reported speech
+#+INCLUDE "cognition.org" :minlevel 2
 * Growing a language
 syntactic abstractions - syntax-rules macros
 examples: the e.g. form
