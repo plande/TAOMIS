@@ -2,48 +2,48 @@
 
 We shall begin our journey with an introspection.
 
-Normally, we tend to think of ourselves as 'actors
-on the stage of life'. We talk to other people, we
+Usually we tend to think of ourselves as "actors
+on the stage of life". We talk to other people, we
 make things, we act. But for those activities to be
-even possible, we need to be equipped in a set of
-complex skills that are inherently 'mental' in their
+even possible, we need to be equipped with a set of
+complex skills that are inherently "mental" in their
 nature.
 
 While this mental activity is discussed
 by philosophers or psychologists, it seems to be
-absolutely central for programming, especially in such
-fields as robotics or game AI programming. Writing
-a program often requires a very particular kind
-of empathy: a programmer needs to somehow imagine
-a perspective of only perceiving some sensory data,
-ask oneself "how could I made the best possible
+absolutely central to programming, especially in
+fields such as robotics or game AI programming.
+Writing a program often requires a very particular
+kind of empathy: a programmer needs to imagine
+a perspective of only perceiving some sensory input,
+ask oneself "how can I make the best possible
 decision based on that data?", and describe or
 externalize one's answer in the form of a working
 program.
 
 An interesting question is: what are the capabilities
 of our minds which allow us to form and comprehend
-descriptions? Again, we are asking from the perspective
-of a 'robot designer'. What would it take to build 
-a robot that would be able to form and comprehend
+descriptions? Mind we are asking from the perspective
+of a "robot designer": what would it take to build 
+a robot capable of comprehending and formulating
 descriptions?
 
 * Presentations
 
-It seems that the most primitive operation that the mind
-needs to be able to perform, is to present something
-to itself. There are tons of philosophical analyses
+It seems that the most primitive operation the mind
+needs to be capable of is to represent things.
+There are numerous philosophical analyses
 concerning this issue, but probably the most commonly
-held belief is that our minds somehow 'reflect'
-or 'model' or 'harmonize with' -- some external reality;
-that it constructs and maintains 'mental representations'
-of some entities from the real world.
+held belief is that our minds somehow "reflect",
+"model", or "harmonize with" some external, observable
+reality; they construct and maintain "mental
+representations" of some entities from the real world.
 
-But it is also commonly accepted, that a mind can
-create presentations of things that do not exist
-in the real world -- this is what happens when we,
-for example, read a fiction novel and imagine interactions
-of characters described in thar novel.
+It is also commonly accepted, that a mind can
+construct presentations of things that do not exist
+in the real world -- this is what happens for example
+when we read a fiction novel and imagine interactions
+between characters described in it.
 
 As a matter of fact, it is somewhat imaginable that
 a mind could exist without any real world. We perceive
@@ -57,8 +57,9 @@ But it doesn't need to /model/ anything from the real
 world; it doesn't need to integrate sensory data
 nor to represent anything 'real'.
 
-So, the ability to invoke /presentations/ is certainly
-one of the fundamental capabilities, without which
+So, the ability to invoke /presentations/ (not
+necessarily /representations/) is certainly
+one of the fundamental capabilities without which
 thinking would be unthinkable.
 
 But what is a presentation? Does it have any structure?
@@ -68,15 +69,15 @@ What does it consist of? How can it be invoked?
 
 Some of these questions are harder to answer than others.
 A presentation is, vaguely speaking, anything that can
-ever be thought of, or 'brought to the one's mind's eye'
-(we're using the word 'presentation' here in the sense
+ever be thought of, or "brought to the one's mind's eye"
+(we're using the word "presentation" here in the sense
 the Brentano school of Philosophy used the German word
-'Vorstellung').
+"Vorstellung").
 
 It seems that at least some presentations have
 a structure, and they might consist of simpler
 presentations -- for example, a presentation of
-'a man with a hammer' might consist of a presentation
+"a man with a hammer" might consist of a presentation
 of a man and a presentation of a hammer.
 
 A presentation can be triggered by way of /association/,
@@ -84,12 +85,12 @@ and in particular, by using /names/. On the most
 abstract level, a name is nothing but a presentation
 whose sole purpose is to invoke another presentation.
 
-We usually associate names with vocal sounds or writtem
-words, but there is nothing inherently 'vocal'
-or 'written' about names.
+We usually associate names with vocal sounds or written
+words, but there is nothing inherently vocal
+or written about names.
 
-From the perspective of a mind, the act of namimg is
-entirely conventional: a mind is aware of the fact,
+From the perspective of a mind, the act of naming is
+entirely conventional: a mind is aware of the fact
 that a certain presentation is a name, so it could, for
 example, use a picture or a smell to name something.
 
@@ -117,10 +118,10 @@ call-with-current-continuation
 
 Lisp differs from many other programming languages
 in that it allows to /reflect/ on symbols, that is,
-rather than using it in /normal suposition/
-(that is, to use it to refer to some thing),
-it also allows to use it in /material/ suposition,
-i.e. to refer to that name itself.
+rather than using a symbol in /normal supposition/
+(to refer to some thing),
+it also allows to use it in /material supposition/,
+(to refer to that name itself).
 
 Syntactically, this is achieved by using the quotation
 operator: the meaning of src_scheme{'x} is the symbol
@@ -149,17 +150,17 @@ and the other will be "the one on the right"
 or "the one on the bottom". So, are they really
 identical?
 
-The answer is, that, if anything, they have an identical
-shape and color, but non-identical spatial position.
+The answer is that, if anything, they have an identical
+shape and color, but non-identical spatial location.
 Therefore, some of their /properties/ are the same, while
 others /differ/.
 
 We have used the word /property/ here. It may be 
 reasonable to ask, what kind of thing is it? Is
 it also some presentation, or is it that we may have
-/a presentation of a property/?
+/a property of a presentation/?
 
-Ww're not going to give any answer here, even though
+We're not going to give any answer here, even though
 -- or maybe because -- the question seems tough.
 What we'd like to point out is that there are at least
 two senses in which we refer to the identity of
@@ -176,7 +177,7 @@ processed by a programming language has some
 representation in computer memory.
 
 So, one of the notions of identity of a presentation
-/abstracts from/ its spatiality and temporality.
+/abstracts/ from its spatiality and temporality.
 
 The idea of abstraction is also a fundamental one,
 both for cognition and computation.
@@ -186,50 +187,50 @@ both for cognition and computation.
 Briefly speaking, abstraction is a mental representation
 which contains 'holes' that can be filled in with some
 content. This definition may not sound very seriously, because
-it uses a metaphor of 'a hole'.
+it uses a metaphor of "a hole".
 
-It's worth to realize that the word 'abstract' originates
-in Latin 'abs-trahere', which literally means 'to draw
-away', which is also just a metaphor (even if being
-a word in a foreign language makes it sound more seriously).
+It's worth realizing that the word "abstract" originates
+in Latin "abs-trahere", which literally means "to draw
+away", which is also just a metaphor (even if being
+a word in the language of Cicero makes it sound more seriously).
 
-Every presentation that we may have, is in some way abstract.
-Calling some part of our experience 'a presentation' draws
-a line between the thing being called, and its context.
-The most fundamental 'things' that our presentations
+Every presentation is in some way abstract.
+Calling some part of our experience "a presentation" draws
+a line between the thing being called and its context.
+The most fundamental "things" that our presentations
 abstract from are time and space, but any part of a
 presentation can be abstracted from.
 
 A good mental model for abstraction can be derived from
-a 'find X differences' type of riddle, where a viewer
+a "find X differences" type of riddle, where a viewer
 is presented with a pair of similar images that differ
 only in a few places.
 
-One can form an abstract 'incomplete' 'abstrct' image,
+One can form an abstract, "incomplete" image,
 which contains holes in every place where the two images
 differ.
 
 We form abstractions in our mind all the time. Most of them
 have very short lives, but some of them recur over and over,
 to the point that we find it convenient to provide names
-for those abstractions.
+for them.
 
-This group of abstractions is called 'concepts'.
+This group of abstractions is called "concepts".
 There's many good examples for concepts -- roughly
 as many as there are words in a language.
 
 For example - the concept of a mother. We realize that
-'a mother' is always 'a mother of someone'. The 'hole'
+"a mother" is always "a mother of someone". The "hole"
 in the presentation is (among other things) a child.
 
 * Meaning and compositionality
 
 So far we have noted that we can use names to refer
-to concepts, and that 'everything we can talk about'
+to concepts, and that "everything we can talk about"
 is essentially abstract, which means that it contains
 holes that can be filled with some content.
 
-This act of 'filling holes' is expressed by forming
+This act of "filling holes" is expressed by forming
 complex descriptions. 
 
 There is a correspondence between concepts and
@@ -274,15 +275,15 @@ the meaning of a composition is a composition
 of meanings
 #+END_QUOTE
 
-It is interesting, because it exposes a beautiful
-mathematical structure of a purported relation
-between meanings and compositions. Mathematicians
-usually call this structure -- a /homomorphism/.
+Besides being a great catchphrase, it also exhibits
+what the mathematically inclined readers will
+recognize immediately: a /homomorphism/.
+But what structure does it preserve?
 
-It is worth to note, that the word "composition"
+It is worth noting that the word "composition"
 is used on two senses: the first occurrence refers
-to a composition of words, whereas the second
--- to the senses of words.
+to a composition of /words/, whereas the second
+to the /senses/ of words.
 
 For example, the phrase "a man with a hammer"
 is formed by taking two categorematic terms
@@ -295,10 +296,10 @@ holding a hammer, or a man sitting with a hammer
 in a bar telling jokes and drinking beer,
 and so on.
 
-While the composition of meaning is a large topic
-(and in a sense this whole book is devoted to that
-topic), the composition of words can also be tackled
-in a few different ways.
+While the composition of meaning is an enormous
+topic (for example this whole book is entirely
+devoted to it), the composition of words can also be
+tackled in a few different ways.
 
 In the spoken language, the only way of composing words
 is uttering them one after another. Of course, we
@@ -310,7 +311,7 @@ Written words give us a bit more flexibility.
 We can put words beside, but we can also put
 one word below the other. There are punctuation
 marks that we can use. We can take words in circles,
-undeline them, cross them out, subscript or
+underline them, cross them out, subscript or
 superscript them, connect words with lines, 
 and so on.
 
@@ -321,38 +322,108 @@ important linguistic category is /sentences/.
 
 While names refer to objects, the role of a sentence
 is to establish a relation between certain objects
-(or kinds of objects) or to attribute certal
+(or kinds of objects) or to attribute certain
 properties to them.
 
-A sentence can be used in many ways. One way
-is to describe a certain state of affairs.
-Another is to design a certain situation
-(for example, in lawmaking).
+In other words, /names/ name objects, and
+/sentences/ name states of affairs
+(whatever the latter are).
 
-There are imperative sentences, whose purpose
-is to make someone do something.
+A sentence can be used in many ways
+(between nine and twenty, but this is
+not the topic of this book).
 
-A particular kind of sentence is called
-/a question/. There are, roughly, two kinds
-of questions: yes-no questions, and questions
+One way is to describe a certain situation,
+a state of affairs:
+"The book is on the table.",
+"It is snowing.",
+"Emily kicked the ball.".
+
+Another is to design a certain situation:
+"I pronounce you husband and wife.",
+"I hereby grant you the title of the knight.",
+"The borrower of the book is responsible for
+bringing it back.".
+
+Introducing names is an interesting variation
+on the above:
+"Helium is an element with atomic mass 2.",
+"A bachelor is an unmarried man.".
+
+There are also imperative sentences, whose
+purpose is to make someone do something:
+"Pass me the salt!",
+"Don't touch the red button!",
+"Pull your shoulders and clap your hands!".
+For now we will ignore their existence.
+
+In the course of expressing and exchanging
+images of the world with sentences, we also
+utilise /questions/ -- means of confirming
+particular state of affairs or asking for
+more details on one.
+
+The former are usually called /yes-no questions/
+and are structurally similar to sentences whose
+meaning (i.e. some presentation) is about to be
+confirmed (or denied).
+For example we might ask a yes-no question:
+"Is there a hole in the bottom of the sea?"
+and get a confirmation like
+"Yes, there is a hole in the bottom of the sea."
+or simply "Yes."
+-- unless our interlocutor (perhaps ourselves)
+does not agree with the state of affairs involving
+the hole in the bottom of the sea, in which case
+we would rather get a denial like
+"No, there is no hole in the bottom of the sea."
+or shortly "No."
+
+By uttering sentences we build a presentation
+of states of affairs, some particular mental image.
+By uttering a yes-no question we ask whether the
+image constructed so far agrees with the situation
+conveyed in the question. If that is the case,
+the sentence presenting said situation
+we call /true/. Otherwise we call it /false/.
+In the example above given the answer to the question
+was "Yes.", we'll call the following sentence true:
+"There is a hole in the bottom of the sea.".
+
+The property of sentence being /true/ or /false/
+we call its /logical value/. In other words, we
+consider the existence of at least two logical
+values: /true/ and /false/.
+This issue is strikingly tricky, therefore we
+postpone longer discussion for later section.
+
+The second class of questions are ones
 containing pronouns (like /who/, /what/, /when/,
-/how/, /why/ etc.).
+/how/, /why/ etc.) -- these we usually utilise
+to ask for some additional information regarding
+the state of affairs. The simple example might be
+"Where did you sleep last night?"
+with a possible reply like
+"In the pines."
+Or, in the more interesting case, we could ask
+"What elements are known to be present in the lunar
+surface with relative concentration of above 5% weight?"
+and get a reply like
+"Oxygen, silicon, iron, aluminium, calcium
+and magnesium."
 
-In the first case, the form of a question is like
-a description, and we 'simply' need to check
-whether the description is true or false.
-
-In the second case, the pronouns serve the role
+Questions containing pronouns do not have logical
+value. Rather the pronouns serve the role
 of holes: we ask what objects can be filled into
 those holes to make such a completed sentence
 true.
 
 In either case, the notion of truth (and
-falsehood) is central to reasoning. The values
-/true/ and /false/, when attributed to a sentence,
-are considered the sentence's /logical values/.
+falsehood) is central to reasoning.
+
 
 * The basics of Scheme
+
 
 The notational conventions used by Lisp are
 the following:
@@ -362,8 +433,8 @@ expressions by putting them one after another,
 and surrounding this juxtaposition in a matching
 pair of parentheses
 
-- the first expression is considered "the ruling
-expression", and it controls the meaning of the whole
+- the first (sub)expression is considered "the ruling
+expression", it determines the meaning of the whole
 expression
 
 In Lisp, the meaning of the ruling expression must
@@ -374,7 +445,7 @@ belong to either of the following categories:
 
 The most important primitives in Scheme are for defining
 new meanings, defining new syntaxes (ways of using
-the language), and for creating new abstractions.
+the language), and for introducing new abstractions.
 
 The difference between a semantic and a syntactic
 abstraction is that the former operates on the meanings
@@ -383,17 +454,17 @@ operate on the expressions themselves.
 
 ** Semantic abstraction
 
-The semantic abstraction is created using the
+The semantic abstraction is introduced using the
 src_scheme{lambda} form. It consists of two parts:
-a list of /holes/ (usually refered to as /arguments/,
+a list of /holes/ (usually referred to as /arguments/,
 or -- more technically -- variables bound with the
 src_scheme{lambda} operator) and a /body/, which is
-an expression possibly containing some holes somewhere.
+an expression, possibly containing some holes.
 
-(In most implementations of Lisp - including Scheme
-- it is possible to write expressions, whose evaluation
+(In most implementations of Lisp -- including Scheme
+-- it is possible to write expressions whose evaluation
 does something extra in addition to determining a meaning
--- for example, creates a file, writes a log message
+-- for example creates a file, writes a log message
 or retrieves data from a remote server. In such
 circumstances, it makes sense to create 'abstractions'
 with an empty list of holes. In this book, however,
@@ -444,7 +515,7 @@ could be written as
 
 From now on, the terms src_scheme{square} and
 src_scheme{(lambda (x) (* x x))} can be used
-interchangably: it doesn't matter if one writes
+interchangeably: it doesn't matter if one writes
 
 #+BEGIN_SRC scheme
 (square 5)
@@ -456,8 +527,10 @@ or
 ((lambda (x) (* x x)) 5)
 #+END_SRC
 
--- the expression will effectively be reduced to
-src_scheme{(* 5 5)}.
+-- the former expression will effectively be reduced
+to the latter, which will then be reduced to
+src_scheme{(* 5 5)} and therefore evaluated to
+src_scheme{25}.
 
 *** Expressive power of definitions -- recursion
 
@@ -482,6 +555,10 @@ function which computes a /factorial/ of a given number:
 It introduces a bunch of new concepts, like subtraction,
 comparison, or the primitive conditional operator 
 src_scheme{if}.
+The semicolon marks what is usually called a /comment/
+-- fragment of line after semicolon is not part of Lisp
+expression, it serves purpose of commentary or notational
+convention(s) independent of the language.
 
 The base case of recursion is 0: it should be easy to see,
 that src_scheme{(! 0)} is 1. The value of
@@ -504,19 +581,38 @@ and ask the interpreter about the meaning of
 src_scheme{(diverge)}, then the interpreter will fall
 into a loophole, forever trying to find the answer.
 
+# wygłupy
+
+*Excercise.*
+Does the following expression reduce in finite number
+of steps, or could it also fall into a loophole? 
+
+#+BEGIN_SRC scheme
+((lambda (x) (x x)) (lambda (x) (x x)))
+#+END_SRC
+
+
 ** Syntactic abstraction
 
 The simplicity of the syntax of Lisp allows not only
 to define semantic abstractions (like most other
 programming languages), but also to extend the
-programming language with new linguistic constructs
+language with new constructs
 by means of syntactic abstractions, commonly known
-as macros.
+as /macros/.
 
 For example, Scheme provides the src_scheme{let}
 form, which allows to avoid repetitions and simplify
-complex expressions by naming some of its intermediate
-parts.
+complex expressions by naming some of its
+subexpressions.
+For example:
+
+#+BEGIN_SRC scheme
+(let ((height (* (/ side 2) (sqrt 3)))
+      (base side))
+  (* 1/2 height base))
+#+END_SRC
+
 
 The src_scheme{let} form can be defined as a macro
 which transforms code of form
@@ -526,7 +622,7 @@ which transforms code of form
   <body>)
 #+END_SRC
 
-into a combination of an anonymous abstraction:
+into an application of a semantic abstraction:
 
 #+BEGIN_SRC scheme
 ((lambda (<name> ...) <body>) <value> ...)
@@ -574,8 +670,9 @@ src_scheme{<pattern>} is meant to be rewritten to.
 The src_scheme{...} symbol is treated specially:
 when it follows a sub-pattern (like a variable
 or a structure) in a src_scheme{<pattern>},
-it means that the preceiding sub-pattern is repeated
-zero or more times. An occurrence of every variable
+it means that the preceding sub-pattern is repeated
+zero or more times. Every subsequent occurrence of
+each variable
 from that sub-pattern in a src_scheme{<template>}
 must be followed by the src_scheme{...} symbol.
 
@@ -590,12 +687,12 @@ processing symbolic expressions in mind.
 
 The set of its primitive operations was designed
 to fulfill this goal. We have already seen one example
-of this: we said earlier, that if we want to refer
+of this: we said earlier that if we want to refer
 to a symbol, rather than a meaning of that symbol,
 we need to prepend it with the src_scheme{'} character:
 for example, src_scheme{'*} refers to the
 symbol src_scheme{*}, rather than multiplication
-or something like that.
+(or whatever it happens to stand for).
 
 The use of a single character as an operator
 may seem to contradict the rules that we mentioned
@@ -626,17 +723,17 @@ element is the number 3.
 
 ** The anatomy of expressions
 
-Every structure can either be atomic or compound.
+Every structure can be either atomic or compound.
 A compound structure is a structure which joins
 a few structures together. The smallest amount
-of structures thatbcan be joined together is 2.
+of structures that can be joined together is 2.
 
 In Lisp, the basic structure for joining (two)
 things together is called a /cons cell/ or a /pair/.
-A cons cell is created by the use of a two-argument
-src_scheme{cons} function.
+A cons cell is created with a two-argument
+src_scheme{cons} primitive operation.
 
-A pair of two values /a/ and /b/ is writtem down
+A pair of two values /a/ and /b/ is written down
 as src_scheme{(a . b)} (the spaces surrounding
 the dot are important -- we need to make sure
 that the dot is not interpreted as a part of
@@ -650,30 +747,30 @@ the value of the expression
 is the pair src_scheme{(1 . 2)}.
 
 The left item of a pair can be retrieved using
-the src_scheme{car} function, whereas the right
+the src_scheme{car} operation, whereas the right
 item of a pair can be retrieved using the 
-src_scheme{cdr} function:
+src_scheme{cdr} operation. Thus the value of
 
 #+BEGIN_SRC scheme
 (car (cons 1 2))
 #+END_SRC
 
-gives 1, while 
+is src_scheme{1}, while for
 
 #+BEGIN_SRC scheme
 (cdr (cons 1 2))
 #+END_SRC
 
-gives 2. Although the names src_scheme{car}
+it is src_scheme{2}.
+Although the names src_scheme{car}
 and src_scheme{cdr} are not very descriptive
 (they originated from some very low level technical
 details of the first implementation of Lisp,
 which ran on a floor-sized mainframe computer
-in 1950s), they got stuck with Lisp, and its
+in 1950s), they got stuck with Lisp, and it is
 useful to know them.
 
-The good news is that generally we won't be using
-them here,except a few places.
+The good news is that we will generally avoid them.
 
 *** List processing
 
@@ -681,7 +778,7 @@ A particular type of expression is known as a /list/:
 a list is either an empty list, or a cons cell whose
 left item (usually called a /head/) is the first
 element of the list, and whose right item (usually
-called a /tail/) is a (possibly empty) list storing
+called a /tail/) is a (possibly empty) list of
 the remaining elements.
 
 The empty list is written down as src_scheme{()}.
@@ -699,17 +796,16 @@ expression could be written down as
 (1 . (2 . (3 . ())))
 #+END_SRC
 
-While it may seem awkward at first, the same thing
+While at first it may seem awkward, the same value
 can be written down as
 
 #+BEGIN_SRC scheme
 (1 2 3)
 #+END_SRC
 
-These two notations are indistinguishable for a Scheme
-interpreter and can be used interchangably.
-
-The following variants are also possible:
+The two notations are indistinguishable for a Scheme
+interpreter and can be used interchangeably, along
+with variations like:
 
 #+BEGIN_SRC scheme
 (1 . (2 3))
@@ -739,16 +835,18 @@ Earlier in this chapter, we have made a few remarks
 about the notion of identity and problems with it.
 
 This question also has its emanation in the realm of
-Lisp expressions. Is the expression (+ 2 3) the same
-as the expression (+ 2 3)? They look the same, but are
-located in different places!
+Lisp expressions. Is the expression src_scheme{(+ 2 3)}
+the same
+as the expression src_scheme{(+ 2 3)}?
+They look the same (have the same shape), but are
+located in different places of this page!
 
 Scheme comes with a few notions of identity.
 The most primitive notion of identity is called
 src_scheme{eq?} and it tests whether its arguments
 have the same memory location.
 
-Scheme is organized so that it makes sure that two
+Scheme is organized such that it makes sure any two
 symbols that "look the same" (i.e. consist of the
 same sequence of characters) are src_scheme{eq?}
 to each other, or that they are references to the
@@ -759,7 +857,7 @@ of cons cells: potentially each evaluation of the
 src_scheme{cons} function may result in allocation
 of a new piece of memory. It may therefore be the case
 that a list src_scheme{(1 2 3)} may not be
-src_scheme{eq?} to a list src_scheme{(1 2 3)}.
+src_scheme{eq?} to another list src_scheme{(1 2 3)}.
 
 This can be resolved, again, by /abstracting/
 from memory addresses:
@@ -809,7 +907,8 @@ which should be easier to read.
 ** Quasi-quotation
 
 Meta-programming is about writing programs which
-process other programs. For this reason, it is
+process and generate other programs.
+For this reason, it is
 convenient to have a language that allows to talk
 about the structures of linguistic expressions.
 
@@ -823,14 +922,14 @@ as a meta-language for talking about expressions.
 Philosophers who were dealing with the meanings
 of language expressions have conceived interesting
 ways of talking about linguistic expressions.
-In particular, Willard van Orman Quine came up
+In particular, Willard Van Orman Quine came up
 with a notational convention known as /quasi-quotation/.
 
-This convention works similarly to 'normal' quotation,
+This convention works similarly to "ordinary" quotation,
 but it allows to /unquote/ certain parts of expression
 (if you're looking for a unifying theme of this
-chapter, you can think of unquoting as "making a hole
-in a quotation"),
+chapter, think of unquoting as "making a hole
+in a quotation").
 
 Quasi-quotation has been adapted by Lisp programmers.
 In Scheme, there are two aspects of the implementation.
@@ -884,18 +983,24 @@ is equivalent to
 Of course, the src_scheme{`} operator can be used
 to form structures of arbitrary complexity -- not just
 pairs -- and the src_scheme{,} operator can appear
-in any position.
+in any position, e.g.
+
+#+BEGIN_SRC scheme
+`(+ (* ,a ,a) (* ,b ,b))
+`(the value of (+ 2 3) is ,(+ 2 3))
+`(it might seem tricky to get (,'unquote a))
+#+END_SRC
 
 The src_scheme{,@} operator is used for splicing
 lists. If the variable src_scheme{x} is bound to
-a list, say, src_scheme{'(2 3 4)}, then the
+a list, say, src_scheme{(2 3 4)}, then the
 value of the expression
 
 #+BEGIN_SRC scheme
 `(1 ,@x 5)
 #+END_SRC
 
-is the list src_scheme{'(1 2 3 4 5)}, i.e. a list of
+is the list src_scheme{(1 2 3 4 5)}, i.e. a list of
 5 elements. By contrast, the use of the regular
 src_scheme{unquote} operator, i.e.
 
@@ -903,7 +1008,7 @@ src_scheme{unquote} operator, i.e.
 `(1 ,x 5)
 #+END_SRC
 
-would produce the list src_scheme{'(1 (2 3 4) 5)},
+would produce the list src_scheme{(1 (2 3 4) 5)},
 that is, a list of three elements, whose second
 element is a list of three elements.
 
@@ -911,7 +1016,7 @@ Of course, while this is the default interpretation,
 programmers are free to redefine the meanings
 of the src_scheme{quasiquote}, src_scheme{unquote}
 and src_scheme{unquote-splicing} whenever they
-need the brevity that their shorter countetparts
+need the brevity that their shorter counterparts
 offer.
 
 * What lies ahead
